@@ -1,16 +1,28 @@
 resource "heroku_app" "ci" {
   name   = "${var.app_name}-app-ci"
   region = "eu"
+  sensitive_var = {
+    LOGZ_TOKEN = "${var.logz_token}"
+    LOGZ_URL = "${var.logz_url}"
+  }
 }
 
 resource "heroku_app" "staging" {
   name   = "${var.app_name}-app-staging"
   region = "eu"
+  sensitive_var = {
+    LOGZ_TOKEN = "${var.logz_token}"
+    LOGZ_URL = "${var.logz_url}"
+  }
 }
 
 resource "heroku_app" "production" {
   name   = "${var.app_name}-app-prod"
   region = "eu"
+  sensitive_var = {
+    LOGZ_TOKEN = "${var.logz_token}"
+    LOGZ_URL = "${var.logz_url}"
+  }
 }
 
 resource "heroku_pipeline" "app" {
