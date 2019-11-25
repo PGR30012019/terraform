@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "pgr301bucket"
-    key    = "EnKeySomErUnikBananAppelsinSmoothie2019/terraform.tfstate"
-    region = "eu-north-1"
+    bucket = "pgr301bucket2"
+    key    = "EnKeySomErUnikBananAppelsinSmoothie2019-skb/terraform.tfstate"
+    region = "eu-west-1"
   }
 }

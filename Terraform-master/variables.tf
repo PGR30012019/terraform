@@ -1,7 +1,7 @@
 variable "app_name" {
-  default = "my-geiger"
+  default = "my-geiger-skb"
 }
 
 variable "pipeline_name" {
-  default = "my-geiger"
+  default = "my-geiger-skb"
 }
